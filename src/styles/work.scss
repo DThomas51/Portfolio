@@ -1,0 +1,68 @@
+.work-wrapper {
+  width: 80vw;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 3rem;
+    line-height: 20px;
+  }
+  .grid {
+    display: grid; 
+    margin-top: 20px;
+    grid-template-columns: 20vw 20vw 20vw ;
+    gap: 11vmin;
+    grid-template-areas:
+      "wp aom hp"
+      ;
+    @include media(">=phone", "<lgphone") {
+      grid-template-columns: 20vw 20vw 20vw  ;
+    }
+    @include media(">=lgphone", "<tablet") {
+      grid-template-columns: 20vw 20vw 20vw ;
+    }
+    @include media(">=tablet", "<desktop") {
+      grid-template-columns: 20vw 20vw 20vw ;
+    }
+  }
+  .wp{
+    grid-area: wp;
+    justify-self: center;
+    align-self: center;
+    background: url(../images/WP.PNG);
+    background-size: cover;
+    border-radius: 5px;
+    height: 30vmin;
+    width: 30vmin;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+  }
+  .aom{
+    grid-area: aom;
+    justify-self: center;
+    align-self: center;
+    background: url(../images/AOM.png);
+    background-size: cover;
+    border-radius: 5px;
+    height: 30vmin;
+    width: 30vmin;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+  }
+  .hp{
+    grid-area: hp;
+    justify-self: center;
+    align-self: center;
+    background: url(../images/Hp.png);
+    background-size: cover;
+    border-radius: 5px;
+    height: 30vmin;
+    width: 30vmin;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+  }
+}
